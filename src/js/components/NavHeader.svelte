@@ -16,9 +16,9 @@
       <a href="#"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
-          height="26px"
+          height="35px"
           viewBox="0 -960 960 960"
-          width="26px"
+          width="35px"
           fill="#e8eaed"
           ><path
             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
@@ -27,23 +27,19 @@
       >
     </li>
     <li><a href="/src/index.html">Home</a></li>
-    <li><a href="#">Placeholder</a></li>
-    <li><a href="#">Placeholder</a></li>
-    <li><a href="#">Placeholder</a></li>
+    <li><a href="/search/">Search Campsites</a></li>
   </ul>
   <ul>
     <li><a href="/src/index.html">Site Scout</a></li>
     <li class="hideOnMobile"><a href="/src/index.html">Home</a></li>
-    <li class="hideOnMobile"><a href="#">Placeholder</a></li>
-    <li class="hideOnMobile"><a href="#">Placeholder</a></li>
-    <li class="hideOnMobile"><a href="#">Placeholder</a></li>
-    <li class="hideOnDesktop"on:click={showSidebar}>
+    <li class="hideOnMobile"><a href="/search/">Search Campsites</a></li>
+    <li class="hideOnDesktop" on:click={showSidebar}>
       <a href="#"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
-          height="26px"
+          height="35px"
           viewBox="0 -960 960 960"
-          width="26px"
+          width="35px"
           fill="#e8eaed"
           ><path
             d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
@@ -56,7 +52,7 @@
 
 <style>
   .nav-header {
-    background-color: #25261A;
+    background-color: #242614;
   }
 
   .nav-header ul {
@@ -68,7 +64,7 @@
   }
 
   .nav-header ul li {
-    height: 60px;
+    height: 100px;
   }
 
   .nav-header ul li a {
@@ -77,12 +73,13 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #DFEDF2;
+    font-size: 1.9em;
+    color: #B0BEBF;
   }
 
   .nav-header ul li a:hover {
-    background-color: #DFEDF2;
-    color: #25261A;
+    background-color: #B0BEBF;
+    color: #242614;
   }
 
   .nav-header ul li:first-child {
@@ -96,7 +93,7 @@
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #25261A;
+    background-color: #242614;
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -115,13 +112,13 @@
     display: none;
   }
 
-  @media(max-width: 800px) {
+  @media (max-width: 800px) {
     .hideOnMobile {
-        display: none;
+      display: none;
     }
 
     .hideOnDesktop {
-        display: flex;
+      display: flex;
     }
   }
 </style>

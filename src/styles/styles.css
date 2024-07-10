@@ -5,9 +5,52 @@
 
 body {
     min-height: 100vh;
-    background-image: url(../images/tent-lake.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     font-family: proxima-nova, sans-serif;
+}
+
+.home-container {
+    background-image: url(../images/bg-small.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(208, 211, 222, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.home-search-container h1 {
+    color: #242614;
+    font-size: 3em;
+}
+
+.home-search-container input {
+    font-size: 1.5em;
+    text-align: center;
+    padding: .25em;
+    border-radius: 10px;
+    border: solid rgba(208, 211, 222, 0.5);
+    margin: .5em;
+}
+
+.home-search-container button {
+    font-size: 2em;
+    padding: .45em;
+    border: solid #242614;
+    border-radius: 10px;
+    background-color: #242614;
+    color: #B0BEBF;
+    margin: .5em;
+    cursor: pointer;
 }
