@@ -47,18 +47,6 @@ body {
     font-size: 3em;
 }
 
-.home-search-container input {
-    font-size: 2em;
-    text-align: center;
-    padding: 0.25em;
-    border-radius: 10px;
-    border: solid rgba(208, 211, 222, 0.5);
-    margin: 0.5em;
-    width: 80%;
-    max-width: 80%;
-    box-sizing: border-box; 
-}
-
 .home-search-container button {
     font-size: 2em;
     padding: 0.45em;
@@ -68,8 +56,8 @@ body {
     color: #B0BEBF;
     margin: 0.5em;
     cursor: pointer;
-    width: 50%; 
-    max-width: 50%;
+    width: 70%; 
+    max-width: 70;
     box-sizing: border-box; 
 }
 
@@ -106,6 +94,10 @@ body {
     width: 75px;
     max-width: 75px; 
     padding: 0; 
+}
+
+#search-bar button:hover {
+    cursor: pointer;
 }
 
 #search-bar svg {
