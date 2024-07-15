@@ -13,39 +13,41 @@
 <nav class="nav-header">
   <ul class="sidebar">
     <li on:click={hideSidebar}>
-      <a href="#"
-        ><svg
+      <button>
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           height="35px"
           viewBox="0 -960 960 960"
           width="35px"
           fill="#e8eaed"
-          ><path
+        >
+          <path
             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-          /></svg
-        ></a
-      >
+          />
+        </svg>
+      </button>
     </li>
     <li><a href="/src/index.html">Home</a></li>
-    <li><a href="/search/">Search Campsites</a></li>
+    <li><a href="/search/">Search<br>Campsites</a></li>
   </ul>
   <ul>
     <li><a href="/src/index.html">Site Scout</a></li>
     <li class="hideOnMobile"><a href="/src/index.html">Home</a></li>
     <li class="hideOnMobile"><a href="/search/">Search Campsites</a></li>
     <li class="hideOnDesktop" on:click={showSidebar}>
-      <a href="#"
-        ><svg
+      <button>
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           height="35px"
           viewBox="0 -960 960 960"
           width="35px"
           fill="#e8eaed"
-          ><path
+        >
+          <path
             d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-          /></svg
-        ></a
-      >
+          />
+        </svg>
+      </button>
     </li>
   </ul>
 </nav>
@@ -74,11 +76,11 @@
     display: flex;
     align-items: center;
     font-size: 1.9em;
-    color: #B0BEBF;
+    color: #b0bebf;
   }
 
   .nav-header ul li a:hover {
-    background-color: #B0BEBF;
+    background-color: #b0bebf;
     color: #242614;
   }
 
@@ -106,10 +108,18 @@
 
   .nav-header .sidebar li a {
     width: 100%;
+    display: block;
+    text-align: left;
   }
 
   .hideOnDesktop {
     display: none;
+  }
+
+  button {
+    background-color: #242614;
+    border: none;
+    margin: 15px;
   }
 
   @media (max-width: 800px) {
