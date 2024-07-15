@@ -1,14 +1,11 @@
-console.log('Google API Key at top level:', import.meta.env.VITE_GOOGLE_KEY);
-
 export async function geocode() {
   const searchInput = localStorage.getItem("searchInput");
   const apiKey = import.meta.env.VITE_GOOGLE_KEY;
-  console.log('Google API Key:', apiKey);
-  console.log('Search Input:', searchInput);
 
-  if (searchInput && apiKey) {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(searchInput)}&key=${apiKey}`;
-    console.log('Geocoding URL:', url);
+  if (searchInput) {
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+      searchInput
+    )}&key=${apiKey}`;
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -25,6 +22,6 @@ export async function geocode() {
       console.error("Error getting latitude and longitude:", error);
     }
   } else {
-    console.error("Search input or API key is missing");
+    console.error("Error getting lat and lng");
   }
 }
