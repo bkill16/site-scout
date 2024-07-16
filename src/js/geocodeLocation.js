@@ -15,6 +15,8 @@ export async function geocode() {
         const longitude = data.results[0].geometry.location.lng;
         console.log("Lat:", latitude);
         console.log("Lng:", longitude);
+        localStorage.setItem("lat", latitude);
+        localStorage.setItem("lng", longitude);
       } else {
         console.error("Error getting latitude and longitude:", data.status);
       }
