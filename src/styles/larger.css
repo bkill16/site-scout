@@ -10,12 +10,6 @@
   }
 
   /********** Search Page Styles **********/
-  #search-bar {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  }
-
   #search-bar input {
     font-size: 1.7em;
     text-align: left;
@@ -34,5 +28,10 @@
   #search-bar svg {
     height: 3.7em; 
     width: 3.7em; 
+}
+
+#facilities-container {
+  gap: 50px;
+  padding-bottom: 50px;
 }
 }
