@@ -49,7 +49,7 @@ export async function displaySearchResults() {
     const facilityButton = document.createElement("button");
     facilityButton.classList.add("facility-button");
     facilityButton.textContent = "More Info";
-    facilityButton.dataset.facilityId = facility.id; // Set the facilityId as a data attribute
+    facilityButton.dataset.facilityId = facility.id;
 
     facilityCard.appendChild(facilityButton);
     container.appendChild(facilityCard);
