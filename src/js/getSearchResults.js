@@ -1,10 +1,10 @@
-import { getImages } from "./getImages"
+import { getImages } from "./getImages";
 
 export async function getSearchResults() {
   const lat = localStorage.getItem("lat");
   const lng = localStorage.getItem("lng");
   const apiKey = import.meta.env.VITE_REC_KEY;
-  const radius = 25; // Radius in miles
+  const radius = 25;
   const facilityType = "Campground";
 
   if (lat && lng) {
@@ -27,7 +27,7 @@ export async function getSearchResults() {
             return {
               name: facility.FacilityName,
               type: facility.FacilityTypeDescription,
-              images: images.map(img => img.URL) // Assuming the image URL is stored in img.URL
+              images: images.map((img) => img.URL),
             };
           })
         );

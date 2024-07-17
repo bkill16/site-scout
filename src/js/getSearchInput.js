@@ -8,11 +8,12 @@ export function getSearchInput() {
       searchPageButton.addEventListener("click", async () => {
         const searchPageInput = document.querySelector("#search-input").value;
         localStorage.setItem("searchInput", searchPageInput);
+        sessionStorage.setItem("searchInput", searchPageInput);
+        sessionStorage.removeItem("facilities");
+
         await geocode();
         displaySearchResults();
       });
-    } else {
-      console.error("Search button not found");
     }
   });
 }

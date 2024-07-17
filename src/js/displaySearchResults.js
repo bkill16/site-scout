@@ -1,7 +1,16 @@
 import { getSearchResults } from "./getSearchResults";
 
 export async function displaySearchResults() {
-  const facilities = await getSearchResults();
+  let facilities = [];
+
+  const storedFacilities = sessionStorage.getItem("facilities");
+  if (storedFacilities) {
+    facilities = JSON.parse(storedFacilities);
+  } else {
+    facilities = await getSearchResults();
+    sessionStorage.setItem("facilities", JSON.stringify(facilities));
+  }
+
   const container = document.querySelector("#facilities-container");
 
   container.innerHTML = "";

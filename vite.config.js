@@ -9,7 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "src/index.html",
-        search: "src/search/index.html"
+        search: "src/search/index.html",
+        info: "src/info/index.html"
       },
     },
   },
