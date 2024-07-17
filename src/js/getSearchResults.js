@@ -25,6 +25,7 @@ export async function getSearchResults() {
           ).map(async (facility) => {
             const images = await getImages(facility.FacilityID);
             return {
+              id: facility.FacilityID, // Include the facilityId
               name: facility.FacilityName,
               type: facility.FacilityTypeDescription,
               images: images.map((img) => img.URL),
