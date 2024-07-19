@@ -23,6 +23,7 @@ export async function getFacilityDetails() {
                 name: facility.FacilityName,
                 type: facility.FacilityTypeDescription,
                 images: facilityImages.map((img) => img.URL),
+                description: facility.FacilityDescription
             };
         } catch (error) {
             console.error("No data found for this facility", error);

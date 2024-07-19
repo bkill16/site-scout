@@ -6,17 +6,28 @@ export async function displayFacilityDetails() {
   const container = document.querySelector("#facility-details-container");
   container.innerHTML = "";
 
-  const facilityName = document.createElement("h1");
-  facilityName.classList.add("fd-name");
-  facilityName.textContent = facility.name;
+  if (facility) {
+    const facilityName = document.createElement("h1");
+    facilityName.classList.add("fd-name");
+    facilityName.textContent = facility.name;
 
-  const facilityType = document.createElement("h2");
-  facilityType.classList.add("fd-type");
-  facilityType.textContent = facility.type;
+    const facilityType = document.createElement("h2");
+    facilityType.classList.add("fd-type");
+    facilityType.textContent = facility.type;
 
-  const imagesContainer = createImageContainer(facility);
+    const imagesContainer = createImageContainer(facility);
 
-  container.append(facilityName);
-  container.append(facilityType);
-  container.append(imagesContainer);
+    const facilityDescription = document.createElement("div");
+    facilityDescription.classList.add("fd-description");
+    facilityDescription.innerHTML = facility.description;
+
+    container.append(facilityName);
+    container.append(facilityType);
+    container.append(imagesContainer);
+    container.append(facilityDescription);
+  } else {
+    const errorMessage = document.createElement("p");
+    errorMessage.textContent = "Facility details could not be loaded.";
+    container.append(errorMessage);
+  }
 }
