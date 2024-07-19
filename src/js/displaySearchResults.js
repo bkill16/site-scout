@@ -1,4 +1,6 @@
 import { getSearchResults } from "./getSearchResults";
+import { getFacilityId } from "./getFacilityId";
+import { displayFacilityDetails } from "./displayFacilityDetails";
 
 export async function displaySearchResults() {
   let facilities = [];
@@ -50,6 +52,8 @@ export async function displaySearchResults() {
     facilityButton.classList.add("facility-button");
     facilityButton.textContent = "More Info";
     facilityButton.dataset.facilityId = facility.id;
+
+    facilityButton.addEventListener("click", getFacilityId);
 
     facilityCard.appendChild(facilityButton);
     container.appendChild(facilityCard);
