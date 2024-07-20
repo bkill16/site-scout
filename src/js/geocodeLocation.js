@@ -17,9 +17,8 @@ export async function geocode() {
         console.log("Lng:", longitude);
         localStorage.setItem("lat", latitude);
         localStorage.setItem("lng", longitude);
-      } else {
-        console.error("Error getting latitude and longitude:", data.status);
-      }
+      } 
+      
     } catch (error) {
       console.error("Error getting latitude and longitude:", error);
     }

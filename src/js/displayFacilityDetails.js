@@ -1,5 +1,5 @@
 import { getFacilityDetails } from "./getFacilityDetails.js";
-import { createImageContainer } from "./imageCarousel.js";
+import { createImageContainer } from "./imageContainer.js";
 
 export async function displayFacilityDetails() {
   let facility = await getFacilityDetails();

@@ -3,6 +3,8 @@ import Footer from "./components/Footer.svelte";
 import { getSearchInput } from "./getSearchInput";
 import { displaySearchResults } from "./displaySearchResults";
 import { displayFacilityDetails } from "./displayFacilityDetails";
+import { displayCampsites } from "./displayCampsiteLinks";
+import { displayCampsiteDetails } from "./displayCampsiteDetails";
 
 const nav = new Nav({
   target: document.querySelector(".nav-header"),
@@ -21,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const facilityDetailsContainer = document.querySelector(
     "#facility-details-container"
   );
+  const campsitesContainer = document.querySelector("#campsites-container")
+  const campsiteAttributes = document.querySelector("#campsite-details-container")
 
   if (storedSearchInput && searchInputElement) {
     searchInputElement.value = storedSearchInput;
@@ -32,7 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  if (facilityDetailsContainer) {
+  if (facilityDetailsContainer && campsitesContainer) {
     displayFacilityDetails();
+    displayCampsites();
+  }
+
+  if (campsiteAttributes) {
+    displayCampsiteDetails();
   }
 });

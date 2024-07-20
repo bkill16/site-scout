@@ -10,7 +10,8 @@ export default defineConfig({
       input: {
         main: "src/index.html",
         search: "src/search/index.html",
-        info: "src/info/index.html"
+        facility: "src/info/index.html",
+        campsite: "src/campsite/campsite.html"
       },
     },
   },

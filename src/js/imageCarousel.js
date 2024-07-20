@@ -1,25 +1,28 @@
-export function createImageContainer(facility) {
-    const imagesContainer = document.createElement("div");
-    imagesContainer.classList.add("fd-images-container");
-  
-    if (facility.images && facility.images.length > 0) {
-      facility.images.forEach((imgURL, index) => {
-        const img = document.createElement("img");
-        img.src = imgURL;
-        img.alt = `${facility.name} image`;
-        if (index === 0) {
-          img.classList.add("active");
-        }
-        imagesContainer.appendChild(img);
-      });
-    } else {
-      const img = document.createElement("img");
-      img.src = "../images/no_image.jpg";
-      img.alt = `No image available for ${facility.name}`;
-      img.classList.add("active");
-      imagesContainer.appendChild(img);
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth >= 768) {
+        initializeCarousel();
     }
-  
-    return imagesContainer;
-  }
-  
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            initializeCarousel();
+        } else {
+            destroyCarousel();
+        }
+    });
+});
+
+function initializeCarousel() {
+    const containers = document.querySelectorAll(".fd-images-container .image-wrapper");
+    containers.forEach(container => {
+        $(container).slick();
+    });
+}
+
+function destroyCarousel() {
+    const containers = document.querySelectorAll(".fd-images-container .image-wrapper");
+    containers.forEach(container => {
+        if ($(container).hasClass('slick-initialized')) {
+            $(container).slick('unslick');
+        }
+    });
+}

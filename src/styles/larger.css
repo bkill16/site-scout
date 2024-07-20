@@ -34,4 +34,34 @@
   gap: 50px;
   padding-bottom: 50px;
 }
+
+/********** Facility Details **********/
+.fd-images-container .image-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.fd-images-container .image-wrapper img {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 50%;
+  object-fit: cover;
+}
+
+.fd-images-container img {
+  width: 800px;
+  height: auto;
+}
+
+/********** Campsite Details **********/
+#campsite-details-container {
+  margin: 5px;
+}
+
+.campsite-details-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: left;
+}
 }

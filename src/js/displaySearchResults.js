@@ -1,6 +1,5 @@
 import { getSearchResults } from "./getSearchResults";
 import { getFacilityId } from "./getFacilityId";
-import { displayFacilityDetails } from "./displayFacilityDetails";
 
 export async function displaySearchResults() {
   let facilities = [];

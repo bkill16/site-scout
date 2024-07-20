@@ -55,6 +55,9 @@
 <style>
   .nav-header {
     background-color: #242614;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   .nav-header ul {
@@ -63,10 +66,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
+    padding: 0;
   }
 
   .nav-header ul li {
-    height: 100px;
+    height: 60px;
   }
 
   .nav-header ul li a {

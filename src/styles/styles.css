@@ -6,8 +6,11 @@
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   overflow-x: hidden;
+  padding: 0;
 }
 
 body {
@@ -107,6 +110,33 @@ body {
   fill: #b0bebf;
 }
 
+#distance-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.distance-button {
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+.selected {
+  background-color: #242614;
+  color: white;
+}
+
+.distance-button:hover,
+.distance-button .selected:hover {
+  cursor: pointer;
+} 
+
+
 #facilities-container {
   display: flex;
   flex-wrap: wrap;
@@ -185,10 +215,14 @@ body {
   overflow: hidden;
 }
 
+.fd-images-container .image-wrapper {
+  display: block;
+  overflow: hidden;
+}
+
 .fd-images-container img {
-  width: 100%;
+  width: 600px;
   height: auto;
-  object-fit: cover;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -210,8 +244,80 @@ body {
   font-size: 1.65em;
 }
 
-.fd-description h2 {
+.fd-description h2, h3, h4, ul, li {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.campsites-title {
+  font-size: 2.25em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.campsite-card {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #b5b3b3; 
+}
+
+.campsite-card:nth-child(odd) {
+  background-color: white;
+}
+
+.campsite-name {
+  font-size: 2.15em;
+  background-color: #b5b3b3;
+  color: black;
+  border: 1px solid #b5b3b3;
+  border-radius: 10px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.campsite-card:nth-child(odd) .campsite-name {
+  background-color: white;
+  border-color: white;
+}
+
+.campsite-name:hover {
+  background-color: #9a9898;
+}
+
+.campsite-card:nth-child(odd) .campsite-name:hover {
+  background-color: #f0f0f0;
+}
+
+/********** Campsite Detail Page **********/
+#campsite-details-content {
+  min-height: 100vh;
+}
+
+#campsite-details-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.campsite-details-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.campsite-detail-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}

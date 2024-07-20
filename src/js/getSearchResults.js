@@ -3,8 +3,8 @@ import { getImages } from "./getImages";
 export async function getSearchResults() {
   const lat = localStorage.getItem("lat");
   const lng = localStorage.getItem("lng");
+  const radius = localStorage.getItem("radius")
   const apiKey = import.meta.env.VITE_REC_KEY;
-  const radius = 25;
   const facilityType = "Campground";
 
   if (lat && lng) {
